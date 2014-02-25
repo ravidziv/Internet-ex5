@@ -1,0 +1,7 @@
+Changes requires for making our application work with express instead of miniExpress:
+1. replace miniexpress to express in the require :)
+2. We comment the "shortcut" that finds index.html if the user just browse to directory - this is already done automaticlly in express
+3. We use the syntax app.listen(8888); - so express will use http instead of miniHttp
+4. app.get ("/todo", ...) => app.use ("/todo", ...) - because express routing isn't the same for both (e.g req.path isn't trimed)
+5. cookie - in our implemention expires expect string, while in express it expects date so we removed .toGMTString()
+6. We use "all" instead of "use" for bodyParser, cookieParser and authentication

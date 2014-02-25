@@ -1,0 +1,10 @@
+can your app suffer from XSS? if yes how can you fix it? if not why not?
+	1. No - the todo list is personal so if hacker adds malicous code to the todo list - it will only affect him
+	2. Moreover we tested by adding html/js to the todo list and verified it isn't shown as html (but as the code for it)
+
+
+can your app suffer from CSRF? if yes how can you fix it? if not why not?
+	It is relevant only for GET request - so only /items and /login are "exposed".
+	login requires user/password - so it isn't bad, and items returns json (and doesn't do important actions in the backend).
+
+

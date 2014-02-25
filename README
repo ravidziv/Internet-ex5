@@ -1,0 +1,29 @@
+(1) What was hard in this ex? 
+	There was nothing hard in this exercise, except massive code change to the previous ex.
+	Massive code changes always comes with bugs and regressions (even if we had "unitests").
+	
+
+(2) What was fun in this ex? (We won’t reduce points in case this part is empty)
+	It is cool that we have our own server and it is easy to extend it to support REST api as we want.
+
+(3) if you were a hacker and you could add a dynamic function that answers the URL /hello/hacker, write 2 different ‘bad’ dynamic functions that will cause DOS. how would you make sure that those functions will get executed? 
+	first bad function:
+	function(req, res, next) {
+		//calling next forever will cause the server to send many responses,
+		//even if the connection has already closed
+		internalUse('/', function(req, res, next)){
+			while(true){
+				next();
+			}
+		})		
+		
+	}
+
+	second bad function:
+	function(req, res, next) {
+		//DONT CALL NEXT - and other handlers will not get executed
+		internalUse('/', function(req, res, next)){ });
+	}
+
+
+

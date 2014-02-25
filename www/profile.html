@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Ravid Ziv</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link href="profile.css" type="text/css"  rel="stylesheet"/>
+    <script src='http://code.jquery.com/jquery.js'></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="profile.js"></script>
+</head>
+<body>
+
+<div class="topSection">
+    <div id="identiSection">
+        <form method="post" action="#" id="details-form">
+            <label for="username">User name</label>
+            <!-- I think that the some name  should be in the username field. -->
+            <input type="text" name="username" id="username" placeholder="Some name"/>
+            <label for="passwordinput">Password</label>
+            <input type="password" name="passwordinput" id="passwordinput" placeholder="Enter password" />
+            <input type="submit" value="Send" />
+        </form>
+    </div>
+</div>
+<div class="start-page">
+    <div id="mainDiv">
+        <div id="some-image">
+            <img src="profile.jpg">
+        </div>
+        <div id="mainPar" class="mainBlock">
+            <h1>Ravid, <u><b>Ziv<br>(20144977-4)</b></u></h1>
+            <p>Welcome to my personal website. I'm live in Jerusleam and I'm 3rd year student
+                for computer science & computational biology at the Hebrew University.</p>
+            <p> I'm doing my 3rd project in medical image procceing. My project is to quantify volumes  in embryos based on automatic analysis of MRI images.<br>
+                I'm doing this project in the medical image procceing lab of Prof' Leo Joskowicz.
+            <p> I'm active in an organization that called The Public Knowledge Workshop that it's mission is to release public information, and currently I'm working on a
+                project that his goal is to make the municipality budgets more readable
+            <table class="mainTable">
+                <caption><h3>My favorite websites</h3></caption>
+                <tr>
+                    <th>name and link of the site</th>
+                    <th>Reason that I like this website</th>
+                </tr>
+                <tr>
+                    <td><a href="http://www.haaretz.co.il/">Haaretz</a></td>
+                    <td>I love to read news, Especially in this site </td>
+                </tr>
+                <tr>
+                    <td><a href="http://www.talschneider.com/">The Plog</a></td>
+                    <td>One of the best political blogs.</td>
+                </tr>
+                <tr>
+                    <td><a href=http://israblog.nana10.co.il/blogread.asp?blog=394281">Raviv Droker Blog</a></td>
+                    <td>Raviv Droker is a great political commentator and he writes a great blog </td>
+                </tr>
+            </table>
+        </div>
+
+        <div  class="mainBlock">
+            <h1>Something Amusing!</h1>
+            A nice film that shows that monkeys are not so different from humans...<br>
+            <a href=http://www.upworthy.com/2-monkeys-were-paid-unequally-see-what-happens-next-sc4-3a?c=upw1"> Monkeys that were paid unequally</a>
+        </div>
+    </div>
+</div>
+<div class="calculator">
+    <div id="calc-image">
+    <div id="screen">
+        <input  type="text" id="screen-text" name="screen-text" value="0">
+    </div>
+        </div>
+    <div id="input-box">
+        <label for="insertInput" id="label-input">Input box</label>
+        <input type="text" name="insertInput" id="insertInput" placeholder="Insert number" value="0"/>
+    </div>
+    <div id="action-buttons">
+        <input type="button" id="plus-button" value="+">
+        <input type="button" id="mult-button" value="*">
+        <input type="button" id="clear-button" value="clear">
+        <input type="button" id="settings-button" value="settings">
+    </div>
+
+    <div id="dialog" name="dialog">
+       <label for="change-default">Change default value</label>
+       <input type="text" name="change-default" id="change-default"/>
+    </div>
+</div>
+
+
+</body>
+</html>

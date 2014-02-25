@@ -1,0 +1,21 @@
+{
+  "name": "internet-ex5",
+  "version": "0.0.0",
+  "description": "ex5",
+  "main": "main.js",
+  "directories": {
+    "todoList": "todoList",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eranroz/internet-ex5.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README",
+  "gitHead": "67e9187022e58bdb6c641fe98d65c7a1e9bee5cc"
+}

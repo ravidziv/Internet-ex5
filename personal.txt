@@ -1,0 +1,12 @@
+describe what was hard
+	1. it's very annoying to install expreess. This because we dont have root permissions in the cs computers.
+	2. there s annoying bug in firebug - when sending delete with body - the body isn't shown.
+										jquery permits sending body for delete requests https://github.com/jquery/jquery/blob/1.4.3/src/ajax.js#L7
+										so when we tried to use the more popular jquery ajax instead of angular it didn't work
+
+describe what was easy
+	almost everything
+
+general comments about the course
+	NA
+

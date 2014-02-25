@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<h2>What we are testing?</h2>
+<h3>Ex3</h3>
+<ol>
+    <li>
+		<u>Resource not found</u>
+		- we try to access non exist resource and validate we get 404
+	</li>
+    <li>
+		<u>Simple good resource</u>
+		 - we try to access existing resource and validate we get 200 and the correct
+		content length and content type
+    </li>
+    <li>
+		<u>Test post</u>
+		 - we validate that other http requests which aren't get returns 405
+	</li>
+    <li>
+		<u>Bad Http request</u>
+		 - we validate when we get invalid http (content-length not a number) it returns 500
+	</li>
+    <li>
+		<u>Too long content length</u>
+		 - we validate that in response to too long content length (longer than content)
+        the server wait for the whole message, and when it fails it gets
+        to timeout
+    </li>
+    <li>
+		<u>Bad http header</u>
+		 - we validate that invalid http header give error to the client
+	</li>
+
+    <li>
+		<u>Stress test</u>
+		 - We request good resource for 3000 times and validate the server doesn't crash
+	</li>
+    <li>
+		<u>Security check</u>
+		 - validate that inaccessible document is really inaccessible
+		 </li>
+    <li>
+		<u>Multiple Requests</u>
+		 - We use net to send multiple requests - and validate we parse it correctly (based on content length)
+	</li>
+    <li>
+		<u>Partial Request</u>
+		 - validate that inaccessible document is really inaccessible
+	 </li>
+</ol>
+<h3>Ex4</h3>
+<ol>
+	<li><u>putTest, getTest, deleteTest, postTest</u> - we validate we can respond to different methods, and that handlers get called only if the required method was used </li>
+	<li><u>paramsTest</u> -we test that our express can extract parameters and expose it to the handlers </li>
+	<li><u>cookieParserTest</u> -we validate we can parse cookies correctly </li>
+	<li><u>jsonTest, urlencodedTest, bodyTest</u>  we validate that these middleware functions work properly and parse the body before handler is called </li>
+</ol>
+</body>
+</html>

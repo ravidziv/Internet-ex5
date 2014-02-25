@@ -1,0 +1,33 @@
+Features in JavaScript that does not exist in Java:
+
+1)dynamic typing - 
+In JavaScript there is dynamic typing unlike Java.
+Dynamic typing languages dynamically infer the types of objects, instead of forcing you to define them, 
+and then enforce those types when the program runs in the interpreter.
+In Javascript yoy can write:
+var x=1; (int x=1) 
+and than:
+x="blblbab"
+but in java int x= "blblbab" doesn't compile.
+
+2)Anonymous functions - 
+In JavaScript the name of the function can be omitted unlike Java.
+In JavaScript you can defined a function with no name that will called in 
+some situations (like I did in my code). 
+In Java you need to give to every function a name when you defined that function.
+
+3)Closures 
+In JavaScript you can defined clousures unlike Java.
+A closure is local variables for a function that  kept alive after the function has returned - is a stack-frame which is not deallocated when
+the function returns
+
+For exemple the following code return reference to a function:
+
+function hello(name) {
+    var hello = 'Hey ' + name;
+    var alerty = function() { alert(hello); }
+    return alerty;
+}
+say_hello = hello('Dani');
+say_hello(); 
+This code alerts "Hey Dani"

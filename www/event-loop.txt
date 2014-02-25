@@ -1,0 +1,45 @@
+2) Lines 16-30 in profile.js:
+
+  $("#settings-button").click(function(){
+        $( "#dialog" ).dialog({
+                       buttons: {
+                           "Change": function() {
+                               var default_screen= $('input[name="change-default"]').val();
+                               calculator.change_default(default_screen);
+                               $('input[name="change-default"]').val("0");
+                               $( this ).dialog( "close" );
+                           },
+                           Cancel: function() {
+                               $( this ).dialog( "close" );
+                           }
+                       }
+                   });
+    });
+
+This part of the code is invokes when the user clicks on the button with the id "settings-button".
+This is done by the jquery syntax of getting to object when someone clicks on it.
+When the button is clicked there is a function that doing  a 'dialog'  to the the dialog windows. This is a jquery-ui method that 
+opens a dialog windows in the center of the main windows that 'protected' from the main window content. 
+In the next line I'm defined the 'buttons:' all the buttons that will appear in this windows. As we can see in the next lines,
+there will be two buttons: the first one is 'Change' that when we click on it there is a function that assign the value of the 
+input filed with the name 'change-default' (this is the input filed that the user insert to it the new default value), and after that,
+changing the value of the default value in the calculator object. In the end, it set the value of the input filed to be zero and close the dialog windows.
+The next line is for the button Cancel. When this button is clicked a function that close the dialog windows is invokes.
+
+
+Lines 32-35 in profile.js:
+
+$("#clear-button").click(function(){
+        var result = calculator.clear();
+        $("#screen-text").val(result);
+    }); 
+
+This part of the code is invokes when the user click on the button with the id 'clear-button'.
+This is done by the jquery syntax of getting to object when someone clicks on it.
+When the button is clicked there is a function that create a variable and insert to it the default value of the 
+calculator object by using the object method 'clear'.
+In the next line it's insert to the input field with the id 'screen-text' the value that received from the calculator object 
+in the previous line.
+
+
+	

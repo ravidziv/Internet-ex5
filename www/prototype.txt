@@ -1,0 +1,11 @@
+function inherit(proto) {
+  function F() {}
+  F.prototype = proto;
+  return new F();
+}
+
+var A = {};
+var B = inherit(A);
+var C = inherit(B);
+var D = inherit(C);
+
